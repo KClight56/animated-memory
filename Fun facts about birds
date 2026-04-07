@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Bird Fun Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e2ffe9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #2c7a7b;
+    }
+    #fact {
+      background: #feffed;
+      border: 2px solid #abd699;
+      border-radius: 10px;
+      padding: 24px 30px;
+      margin: 24px 0;
+      font-size: 1.25rem;
+      color: #354f32;
+      max-width: 400px;
+      text-align: center;
+    }
+    button {
+      background-color: #48bb78;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #2f855a;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐦 Random Bird Fun Facts</h1>
+  <div id="fact"></div>
+  <button onclick="showRandomFact()">Show me another fact!</button>
+
+  <script>
+    const birdFacts = [
+      "Some birds, like the Arctic Tern, migrate over 25,000 miles each year!",
+      "Hummingbirds are the only birds that can fly backwards.",
+      "The world’s smallest bird is the bee hummingbird, weighing less than a penny.",
+      "Ostriches have the largest eyes of any land animal.",
+      "Pigeons can recognize themselves in mirrors, a sign of intelligence.",
+      "Flamingos get their pink color from the food they eat, like shrimp and algae.",
+      "The lyrebird can mimic almost any sound it hears, including chainsaws and camera shutters.",
+      "Penguins mate for life and propose by giving their partners a pebble.",
+      "Owls can turn their heads up to 270 degrees.",
+      "The Kiwi is a bird native to New Zealand and lays eggs that are up to 20% of its body weight."
+    ];
+
+    function showRandomFact() {
+      const fact = birdFacts[Math.floor(Math.random() * birdFacts.length)];
+      document.getElementById('fact').textContent = fact;
+    }
+
+    // Show a fact on load
+    showRandomFact();
+  </script>
+</body>
+</html>
