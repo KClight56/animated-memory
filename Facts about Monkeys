@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Monkey Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px #0001;
+    }
+    h1 {
+      text-align: center;
+      color: #3e855b;
+    }
+    #fact {
+      font-size: 1.3em;
+      margin: 30px 0;
+      text-align: center;
+      min-height: 60px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 28px;
+      font-size: 1em;
+      background: #3e855b;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #29613e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Random Monkey Facts</h1>
+    <div id="fact"></div>
+    <button id="newFactBtn">Show Another Fact</button>
+  </div>
+
+  <script>
+    const monkeyFacts = [
+      "Monkeys use vocalizations, facial expressions, and body movements to communicate.",
+      "There are more than 260 different species of monkeys in the world.",
+      "Monkeys are highly social animals and often live in groups called troops.",
+      "Capuchin monkeys can use tools such as sticks to extract insects from crevices.",
+      "Howler monkeys are the loudest land animals; their howls can be heard up to 3 miles away.",
+      "Some monkeys, like the spider monkey, have prehensile tails that act like extra limbs.",
+      "Monkeys are found in Africa, Central America, South America, and Asia.",
+      "Most monkeys eat fruits, leaves, seeds, nuts, flowers, and insects.",
+      "Baboon troops have complex social structures with strict hierarchies.",
+      "Squirrel monkeys have the largest brain-to-body mass ratio of any primate."
+    ];
+    
+    function showRandomFact() {
+      const idx = Math.floor(Math.random() * monkeyFacts.length);
+      document.getElementById('fact').textContent = monkeyFacts[idx];
+    }
+    
+    document.getElementById('newFactBtn').addEventListener('click', showRandomFact);
+    
+    // Show a fact when the page loads
+    showRandomFact();
+  </script>
+</body>
+</html>
