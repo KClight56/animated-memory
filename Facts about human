@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Facts About Humans!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5e6ee 0%, #bee3db 100%);
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #2d3142;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 24px;
+      background: rgba(255,255,255,0.90);
+      box-shadow: 0 6px 24px rgba(100, 100, 100, 0.1);
+      border-radius: 18px;
+    }
+    h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #338a5c;
+      text-align: center;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .facts-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .fact-card {
+      background: #f8fafb;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(51, 138, 92, 0.08);
+      padding: 28px 22px;
+      transition: transform 0.17s, box-shadow 0.17s;
+      font-size: 1.08rem;
+      position: relative;
+      overflow: hidden;
+      min-height: 120px;
+      cursor: pointer;
+    }
+    .fact-card:before {
+      content: '';
+      position: absolute;
+      left: -45px; top: -45px;
+      width: 70px; height: 70px;
+      background: rgba(187,247,208,0.14);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .fact-card span {
+      font-size: 1.7em;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .fact-card:hover {
+      transform: translateY(-4px) scale(1.025);
+      box-shadow: 0 6px 20px rgba(55, 225, 148, 0.20);
+      background: #e9fcee;
+    }
+    @media (max-width: 650px) {
+      .facts-list {
+        grid-template-columns: 1fr;
+      }
+    }
+    footer {
+      text-align: center;
+      margin-top: 36px;
+      color: #889;
+      font-size: 0.97em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fun Facts About Humans!</h1>
+    <ul class="facts-list">
+      <li class="fact-card"><span>🧠</span>The human brain has about <b>86 billion neurons</b> and is sometimes called "the most complex object in the known universe."</li>
+      <li class="fact-card"><span>👀</span>Your eyes blink about <b>20 times each minute</b>—that’s over 10 million times a year!</li>
+      <li class="fact-card"><span>🏃‍♂️</span>If all the blood vessels in your body were laid end to end, they would stretch over <b>100,000 miles</b>.</li>
+      <li class="fact-card"><span>😅</span>Humans sweat to cool themselves, and the body can produce up to <b>1.5 liters of sweat per hour</b> during intense exercise or heat!</li>
+      <li class="fact-card"><span>👃</span>A human nose can detect <b>over 1 trillion different scents</b>.</li>
+      <li class="fact-card"><span>🦷</span>Tooth enamel is the <b>hardest substance</b> in the human body.</li>
+      <li class="fact-card"><span>🧬</span>If uncoiled, all the DNA in your body’s cells would stretch from the Sun to Pluto and back—<b>17 times</b>!</li>
+      <li class="fact-card"><span>🔊</span>The sound of your voice is produced by the <b>vocal cords vibrating <u>up to 1000 times per second</u></b>!</li>
+    </ul>
+  </div>
+  <footer>
+    &copy; 2026 Fun Facts by Copilot &mdash; Stay curious!
+  </footer>
+</body>
+</html>
